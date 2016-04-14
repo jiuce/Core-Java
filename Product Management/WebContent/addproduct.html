@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add new Product</title>
+<style>
+#header{
+background-color:#00ffff;
+text-align:center;
+padding:5px;
+}	
+
+table{
+background-color:#eeeeee;
+}
+</style>
+</head>
+<body>
+<div id=header>
+<h1>Product Management</h1>
+</div>
+
+<table style="width:100%">
+<tr>
+<td><a href="addproduct.html" name="add">Add new Product</a></td>
+<td><a href="http://localhost:8080/Test1/ViewAllServlet">View All</a></td>
+<td><a href="updatePrice.html">Update price</a></td>
+<td><a href="http://localhost:8080/Test1/CheckBufferServlet">Check buffer status</a></td>
+<td><a href="">Order new Stock</a></td>
+</tr>
+</table>
+<form action="http://localhost:8080/Test1/AddProductServlet" id="addform" method="get">
+<table align="center", width="400">
+<caption>Product Details</caption>
+<tr>
+<td>Name: </td><td><input type="text" name="pname"/></td>
+</tr>
+<tr>
+<td>Price</td><td><input type="text" name="pprice"/></td>
+</tr>
+<tr>
+<td>Quantity</td><td><input type="text" name="pqty"/></td>
+</tr>
+<tr><td colspan=2><input type="submit" value="Submit"></td></tr>
+</table>
+</form>
+</body>
+</html>

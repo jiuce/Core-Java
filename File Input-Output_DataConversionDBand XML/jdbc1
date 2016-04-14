@@ -1,0 +1,2 @@
+create table employee101 (empid int primary key,empname varchar(40),salary double)
+select * from employee101

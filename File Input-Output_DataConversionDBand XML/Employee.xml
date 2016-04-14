@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emps>
+	<employee>
+		<empId>2001</empId>
+		<empName>sam</empName>
+		<empSalary>10000</empSalary>
+	</employee>
+	<employee>
+		<empId>2002</empId>
+		<empName>sammar</empName>
+		<empSalary>2889833</empSalary>
+	</employee>
+	<employee>
+		<empId>2003</empId>
+		<empName>ajay</empName>
+		<empSalary>200000</empSalary>
+	</employee>
+	<employee>
+		<empId>2004</empId>
+		<empName>geet</empName>
+		<empSalary>2186300</empSalary>
+	</employee>
+</emps>
