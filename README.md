@@ -1,8 +1,11 @@
 # My Projects
 
-The Portfolio Screenshot:
+I am working on a range of projects using Java, Spring, Struts and frontend technologies like HTML, CSS, JavaScript.
+Here is the screenshot of my portfolio. It is not yet published online.
+
 ![Portfolio page](images/portfolio.png)
 
+####Description of projects:
 ###Product Management
 It is a web based Java Project. The UI is developed using HTML, CSS and JSP.
 All the user requests are handled by Servlets, created for all operations. 
