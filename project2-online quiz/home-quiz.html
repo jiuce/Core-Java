@@ -1,0 +1,95 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<meta name="description" content="This site help you to evaluate your Java skills">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	</head>
+<body>
+	<header>
+		<h1>Learn Java On Your Own!!</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="home-quiz.html">Home</a></li>
+			<li class="parentofDD"><a href="#">Quiz Topics<span class="caret"></span></a>
+				<div>
+					<ul>
+						<li><a href="IO-quiz.html">InputOutput</a></li>	
+						<li><a href="">Strings</a></li>
+						<li><a href="">Collection</a></li>
+					</ul>	
+				</div>
+			</li>
+			<li><a href="">Sign In</a></li>
+		</ul>	
+	</nav>
+	<section>
+		<form class="login-form">
+			<table>
+			<tr>
+				<td>
+					<label for="username">
+						Username: 
+					</label>
+				</td>
+				<td>
+					<input id="username" type="text">
+				</td>
+			</tr>
+				
+			<tr>
+				<td>
+					<label for="password">
+						Password:
+					</label>
+				</td>
+				<td>
+					<input type="password" id="password"/>
+				</td>
+			</tr>
+			<tr>
+				<td id="submitTD" colspan="2">
+					<input type="submit" value="Submit" id="submitbutton">
+				</td>
+			</tr>
+			</table>
+		</form>
+	</section>
+	<footer>
+		<div id="javalinks">
+			<p><b>Popular Java Tutorials</b></p>
+			<ul>
+				<li><a href="http://www.javaworld.com/category/learn-java/"> Java 	World - Core Java</a></li>
+				<li><a href="http://www.javatpoint.com/java-tutorial">JavaTpoint - Core Java</a></li>
+				<li><a href="http://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html#overview">Java SE 8 - Lambda Expression</a></li>
+			</ul>
+		</div>
+		<div id="contact">
+			<p>
+				<u>
+					Contact
+				</u>
+				<br>
+				Paramita Paul<br>
+				<img src="file:///C:/Portfolio/project2-online%20quiz/Black_Email.png" width="30px" height="25px" padding-bottom="10px"></img>
+				d.s.paramita@gmail.com
+			</p>
+			
+				
+			
+		</div>
+	</footer>
+
+	<script type="text/javascript">
+	$('#submitbutton').click(function(){
+	
+		if(${"#username"}.val()== 'para' && ${"#password"}.val()== 'para'){
+			alert("Login successful");
+		}
+	});			
+	</script>
+</body>
+</html>

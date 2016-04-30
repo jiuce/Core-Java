@@ -1,0 +1,109 @@
+.hidden{
+	display:none;
+}
+*{
+	border:1px;
+}
+
+.main{
+	width:70%;
+	height:500px;
+	border:1px solid black;
+	margin-left: 15%;
+	margin-top: 8%;
+	
+}
+div#info{
+	text-align:center;
+	border:1px;
+}
+
+.qstyle{
+	float:left;
+	padding-left:70px;
+}
+.q1style{
+	clear: both;
+	padding-left:70px;
+}
+
+.submit_btn{
+	position: relative;
+	left:100px;
+	top:30px;
+	padding:5px 10px 5px 10px;
+	background-color: #30cfdb;
+	box-shadow: 0 3px 6px; 	
+	}
+.submit_btn:hover{
+	background-color: orange;
+	color:white;
+	cursor:pointer;
+}
+
+.progress{
+float:right;
+padding-right: 20px;
+border-style: 1px; 
+}
+h3{
+	margin-bottom: 0;
+}
+.tprog{
+	margin-bottom: 10px;
+}
+table.tprog td{
+	opacity: .3;
+	background-color: orange;
+	border:2px solid white;
+	padding: 15px 15px;
+}
+.tindex{
+	border:2px;
+}
+
+#index1{
+	width: 20px;
+	height: 20px;
+	background-color: orange;
+	opacity: .3;
+}
+
+#index2{
+	width: 20px;
+	height: 20px;
+	background-color: orange;	
+}
+
+/*table.tprog td:hover{
+	cursor:pointer;                  /*changes the cursor to hand */
+/*} */
+
+.score_section{
+	position: absolute;
+	top:500px;
+	width:70%;
+	left:40%;
+}
+.score_btn{
+	width:180px;
+	height:90px;
+	border-radius: 4px;
+	background-color: blue;
+	color:white;
+	clear:both;
+	font-size: 20px;
+	left:;
+
+}
+
+.show_score{
+	background-color: yellow;
+	color: red;
+	font-size: 20px;
+}
+
+.score_btn:hover{
+	background-color: red;
+
+}

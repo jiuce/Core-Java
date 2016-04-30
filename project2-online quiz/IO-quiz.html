@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz on Input-Output-Java</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="quiz-page-style.css">
+	
+</head>
+<body>
+	<section class="main">
+	<div id="info">
+		<h2>Welcome to the Quiz section</h2>
+		<p> There would be 5 questions. Your score would be diplayed at the end.</p>
+		
+	</div>
+		<h3 id="test_status" class="q1style"></h3>
+		<br/>
+		<div id="test" class="qstyle"></div>
+	<aside class="progress">
+		<h4>Progress report</h4>
+		<table class="tprog" id="index_table">
+		<tbody>
+			<tr>
+				<td id="t0" name="q_index">1</td>
+				<td id="t1" name="q_index">2</td>
+				<td id="t2" name="q_index">3</td>
+			</tr>
+			<tr>	
+				<td id="t3" name="q_index">4</td>
+				<td id="t4" name="q_index">5</td>
+			</tr>
+		</tbody>
+		</table>
+		<table class="tindex">
+			<tr>
+			<td id="index1"></td><td class="index2">Not Answered</td></tr>
+			<tr><td id="index2"></td><td>Answered</td></tr>
+		</table>
+	</aside>
+	<div class="score_section" id="score_div">	
+		<input type="button" class="score_btn" onClick="showScore()" value="Check my Score"/>
+	</div>
+	
+	</section>
+
+	
+
+<!-- 
+	/* ********************************************************END OF HTML************************************************************* */
+
+
+	/* *****************JAVASCRIPT code************************** */
+ -->
+
+	<script type="text/javascript">
+		window.addEventListener('load',renderQuestions,false);
+		var test, test_status, pos=0, question, chA, chB, chC, correctAnswer, choice, score=0, checked;
+		var questions=[
+				["The standard input is repressented by the variable:", "System.in", "standard Input", "System.keyboard","A"],
+				["The top level abstract stream class in Java", "ReadStream and WriteStream", "InputStream and OutputStream", "Field and Stream","C"],	
+				["What is the name of a stream that connects two running programs? ", " Program stream", "Conduit", "Pipe", "C"],	
+				["What is a buffer", "A section of memory used as a staging area for input or output data.", "The cable that connects a data source to the bus.", " A file that contains binary data.", "A"],
+				[" What is the name of the abstract base class for streams dealing with character input?", "InputStream","Reader and Writer", "ByteStream", "B"]
+		];
+		
+		
+		function _(x){
+			return document.getElementById(x);
+		}	
+
+		function renderQuestions(){
+			console.log("inside render questions");
+			if(pos<questions.length){
+			_("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+			test = _("test");
+			checked = false;
+			question = questions[pos][0];
+				chA = questions[pos][1];
+				chB = questions[pos][2];
+				chC = questions[pos][3];
+				correctAnswer = questions[pos][4];
+				test.innerHTML = "<h3>" + question + "</h3>";
+				test.innerHTML += "<input type='radio' name='choices' value='A'>" + chA + "<br/>";
+				test.innerHTML += "<input type='radio' name='choices' value='B'>" + chB + "<br/>";
+				test.innerHTML += "<input type='radio' name='choices' value='C'>" + chC + "<br/>";
+				test.innerHTML += "<button value='Submit Answer' onClick='checkAnswer()' class='submit_btn'>Submit Answer</button";
+				
+			}
+			else if(pos>questions.length){
+				alert(" Great! You just finished the quiz. Now check your score !!")
+			}
+		}	
+
+		function checkAnswer(){
+		choice = document.getElementsByName("choices");
+			for(var i =0; i<choice.length; i++){
+				if(choice[i].checked){
+					checked = true;
+					if(choice[i].value==correctAnswer){
+						score++;
+						console.log(score);
+					}
+				}
+				if(checked){
+					showProgress();
+				}
+			}
+			
+			pos++;
+			renderQuestions();
+		}
+		
+		
+	function showProgress(){
+		document.getElementById("t"+pos).style.opacity = 1;
+	}	
+
+// var table = document.getElementById("index_table");
+// 		var cells = table.getElementsByTagName("td");
+// 		for(var j=0;j<cells.length; j++){
+// 			cells[j].onClick = function(){
+// 				pos= cells[j].innerHTML;
+// 				alert(pos);
+// 			};
+// 		}
+
+	function showScore(){
+		document.getElementsByClassName('score_btn')[0].style.visibility='hidden';
+		document.getElementById('score_div').style.color='red';
+		document.getElementById('score_div').style.fontSize='xx-large';
+		document.getElementById('score_div').innerHTML="You scored: "+score+" out of 5";
+	}
+
+	</script>
+	
+</body>
+</html>

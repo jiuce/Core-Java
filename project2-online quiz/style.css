@@ -1,0 +1,167 @@
+body{
+	margin:0;
+}
+header{
+background-color: #bcf308;
+display: block;
+height:100px;
+width:100%;
+}
+
+h1{
+font-family: 'Lobster Two', cursive;
+text-align: left;
+padding-left:50px;
+margin-top: 0px;
+font-size: 65px;
+}
+/* Styling the NAVIGATION MENU */
+nav{
+	background-color:#0000bb;
+	text-align: right;
+	font-family: 'Lobster Two', cursive;
+	height:50px;
+	box-shadow: 10px 0px 6px;
+/* Dont Use overflow:hidden, dropdown gets chopped*/
+}
+
+nav>ul{
+	margin:0;
+	padding-right:20px;
+}
+
+nav ul li{
+	display: inline-block;
+	list-style-type: none;
+	transition: all 2s;
+	padding: 10 20 10 20;
+
+}
+
+nav ul li a{
+	text-decoration: none;
+	display:block;
+	color:white;
+	line-height: 30px;
+	font-size: 20px;
+}
+
+nav > ul > li > div {
+	display:none;                /* very important, hides the display when not hovered*/
+	background-color:#0000bb;
+	color:red;
+	border-top: 0;
+	opacity: 0;
+	position:absolute;             /* very important, positions the div out of the nav bar*/
+	width:130px;
+	left:-3px;						/* Adjusted the "width", "margin-top" and "left" to align it under the menu*/
+	text-align: center;
+	margin-top: 10px;
+	
+}
+.parentofDD{
+	position:relative;
+}
+
+nav > ul > li > div>ul{
+	display:block;
+	padding:0;
+}
+
+/* styling of the list elements on mouseover , Dont use > selector here, if space used, it will apply to all li's under nav */
+nav ul li:hover{
+	background-color: white;
+}
+
+nav ul li:hover>a{
+	color: orange;
+}
+
+nav ul li:hover>div{
+	display: block;
+	visibility: visible;
+	opacity:1;
+	text-align: center;
+}
+
+.login-form{
+	width:30%;
+	height:220px;
+	background-color: #78a3e3;
+	position:relative;
+	margin-top:90px;
+	left:35%;
+}
+
+section form table{
+	position:relative;
+	left:70px;
+	top: 50px;
+}
+
+.login-form input:label{
+padding:10px;
+}
+
+.login-form input[type=text], [type=password] {
+width:180px;
+border-radius: 3px;
+height:30px;	
+}
+
+
+#submitTD{
+	text-align: center;
+	
+}
+
+#submitbutton{
+	padding: 6px 105px 6px 100px;
+	border-radius: 8px;
+	background: -moz-linear-gradient(top,#bcf308,#33aa48);
+	box-shadow: 0 2px 6px;
+	color:black;
+}
+
+section form table tr td{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+footer{
+	margin-top: 50px;
+	background-color: #bcf308;	
+	border: 1px solid black;
+	height:120px;              /* height and width are MUST for Footer, unless they dont wrap the included DIVs.*/
+	width: 100%;
+		}
+
+footer li a{
+	text-decoration: none;
+	display: block;
+	font-size: 15px;
+}
+
+footer li a:hover{
+	color:#000068;
+	font-size: 20px;
+}
+footer div{
+	width:300px;
+	float:left;
+	margin-left: 150px;
+}
+
+/*	float:left;
+	position:relative;
+	left: 20%;
+	
+}
+#contact{
+	float: left;
+	
+}
+*/
+ 
+#email{
+	margin-left:20px;
+} 
